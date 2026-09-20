@@ -24,7 +24,7 @@ export default function HeroSection() {
           <ScrollReveal direction="up" delay={0.3} duration={0.8}>
             <div className="border-l-2 border-neutral-300 dark:border-neutral-700 pl-6 py-1">
               <p className="font-serif text-lg sm:text-xl text-neutral-600 dark:text-neutral-300 italic font-light max-w-xl leading-relaxed">
-                &quot;Mencari keteraturan dalam kekacauan kode, menyingkap kebenaran dari balik jejak digital.&quot;
+                &quot;Full-stack web developer and mobile apps developer with an interest in cyber security&quot;
               </p>
             </div>
           </ScrollReveal>
@@ -51,7 +51,7 @@ export default function HeroSection() {
           <div>
             <span className="block text-[10px] text-neutral-400 dark:text-neutral-500 mb-1">BASED IN</span>
             <span className="font-semibold text-neutral-800 dark:text-neutral-200 text-sm normal-case font-sans">
-              Bandung, Indonesia
+              Kudus, Indonesia
             </span>
           </div>
 
