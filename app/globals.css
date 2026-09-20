@@ -1,26 +1,144 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FAFAFA;
+    color: #1C1C1E;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background-color: inherit;
+    color: inherit;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.35em;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D1D6;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A1A1AA;
+}
+
+/* ==========================================
+   COMPREHENSIVE BULLETPROOF DARK MODE STYLES
+   ========================================== */
+html.dark {
+  background-color: #0F0F10 !important;
+  color: #F4F4F5 !important;
+}
+
+html.dark body {
+  background-color: #0F0F10 !important;
+  color: #F4F4F5 !important;
+}
+
+/* Dark Mode Scrollbar */
+html.dark ::-webkit-scrollbar-track {
+  background: #0F0F10;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #27272A;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3F3F46;
+}
+
+/* Background Overrides */
+html.dark .bg-\[\#FAFAFA\] {
+  background-color: #0F0F10 !important;
+}
+html.dark .bg-white {
+  background-color: #161618 !important;
+}
+html.dark .bg-\[\#F4F4F6\]\/70 {
+  background-color: #161618 !important;
+}
+html.dark .bg-neutral-100\/60 {
+  background-color: #161618 !important;
+}
+html.dark .bg-neutral-100 {
+  background-color: #27272A !important;
+}
+html.dark .bg-neutral-50 {
+  background-color: #1E1E20 !important;
+}
+
+/* Text Overrides */
+html.dark .text-neutral-900,
+html.dark .text-neutral-800 {
+  color: #FFFFFF !important;
+}
+html.dark .text-neutral-700,
+html.dark .text-neutral-600 {
+  color: #D4D4D8 !important;
+}
+html.dark .text-neutral-500,
+html.dark .text-neutral-400 {
+  color: #A1A1AA !important;
+}
+html.dark .text-neutral-300 {
+  color: #71717A !important;
+}
+
+/* Hover State Text Overrides */
+html.dark .hover\:text-neutral-950:hover,
+html.dark .hover\:text-neutral-900:hover,
+html.dark .hover\:text-black:hover {
+  color: #FFFFFF !important;
+}
+
+/* Border Overrides */
+html.dark .border-neutral-200,
+html.dark .border-neutral-200\/80,
+html.dark .border-neutral-200\/60,
+html.dark .border-neutral-300 {
+  border-color: #27272A !important;
+}
+
+html.dark .divide-neutral-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #27272A !important;
+}
+
+html.dark .hover\:border-neutral-400:hover {
+  border-color: #52525B !important;
+}
+
+/* Row Hover Overrides */
+html.dark .hover\:bg-neutral-100\/50:hover {
+  background-color: #27272A !important;
+}
+
+/* Image & Asset Inversions for Dark Mode */
+html.dark .dark-invert-asset {
+  filter: invert(1) brightness(1.8) !important;
+}
+
+/* Accent Kanji Text Styling */
+.kanji-sidebar-accent {
+  font-family: var(--font-serif), serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.4em;
+  color: #A1A1AA;
+  user-select: none;
+}
+html.dark .kanji-sidebar-accent {
+  color: #71717A;
 }
