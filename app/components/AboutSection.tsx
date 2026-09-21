@@ -44,7 +44,7 @@ export default function AboutSection() {
                 />
               </div>
               <p className="font-serif text-sm font-semibold text-neutral-800 dark:text-neutral-200 leading-relaxed">
-                Menyeimbangkan presisi logis dengan intuisi kreatif dalam memecahkan misteri teknologi.
+                Balancing logical precision with creative intuition in unravelling the mysteries of technology.
               </p>
             </div>
           </ScrollReveal>

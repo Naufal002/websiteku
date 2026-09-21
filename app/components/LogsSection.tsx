@@ -6,8 +6,8 @@ export default function LogsSection() {
   const logs = [
     {
       quarter: "2025 // Q1",
-      title: "Analisis Malware: Deteksi Dropper Kustom pada Arsitektur Linux",
-      tags: ["[MALWARE]", "[LINUX]"],
+      title: "Finalist: GEMASTIK XVIII 2025",
+      tags: ["[MALWARE ANALYST]", "[MEMORY FORENSIC]", "[NETWORK FORENSIC]", "[LINUX]"],
     },
     {
       quarter: "2024 // Q4",

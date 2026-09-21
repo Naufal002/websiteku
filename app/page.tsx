@@ -6,6 +6,7 @@ import SpecializationSection from "./components/SpecializationSection";
 import SkillsSection from "./components/SkillsSection";
 import ArtifactsSection from "./components/ArtifactsSection";
 import LogsSection from "./components/LogsSection";
+import CertificationsSection from "./components/CertificationsSection";
 import FooterSection from "./components/FooterSection";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <SkillsSection />
         <ArtifactsSection />
         <LogsSection />
+        <CertificationsSection />
       </main>
       <FooterSection />
     </div>
