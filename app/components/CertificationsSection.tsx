@@ -38,7 +38,7 @@ export default function CertificationsSection() {
       image: "/certificates/1770628755057.jpg",
       tags: ["CYBER SECURITY", "NATIONAL COMPETITION", "FINALIST"],
       description:
-        "Recognized as a national finalist in GEMASTIK XVIII (Pagelaran Mahasiswa Nasional Bidang TIK) 2025 held at Telkom University, Bandung.",
+        "Recognized as a national finalist in GEMASTIK XVIII (Pagelaran Mahasiswa Nasional Bidang TIK) 2025 in the Cyber Security / Digital Forensics division.",
     },
     {
       id: "CERT // 02",
@@ -62,7 +62,7 @@ export default function CertificationsSection() {
     },
     {
       id: "CERT // 04",
-      title: "Memulai Pemrograman Dengan Java",
+      title: "Java Programming Fundamentals",
       issuer: "Dicoding Indonesia",
       date: "June 2024",
       image: "/certificates/sertifikat_course_60_1823647_040624133237_page-0001.jpg",
@@ -72,7 +72,7 @@ export default function CertificationsSection() {
     },
     {
       id: "CERT // 05",
-      title: "Memulai Pemrograman dengan Python",
+      title: "Python Programming Fundamentals",
       issuer: "Dicoding Indonesia",
       date: "June 2024",
       image: "/certificates/sertifikat_course_86_1823647_050624104723_page-0001.jpg",
@@ -82,13 +82,23 @@ export default function CertificationsSection() {
     },
     {
       id: "CERT // 06",
-      title: "Kursus Python Fundamentals",
+      title: "Python Course Certificate",
       issuer: "Progate",
       date: "July 2021",
       image: "/certificates/progate-sertifikat.jpg",
       tags: ["PYTHON", "SOFTWARE DEV", "PROGATE"],
       description:
         "Certificate of Completion for 5 Study modules covering foundational Python programming for software development.",
+    },
+    {
+      id: "CERT // 07",
+      title: "GDSC Seminar: Next GDSC Lead 2023",
+      issuer: "Dicoding Indonesia & GDSC IT Telkom Purwokerto",
+      date: "May 2023",
+      image: "/certificates/Dicoding_gdg.jpg",
+      tags: ["GDSC", "COMMUNITY", "DICODING", "LEADERSHIP"],
+      description:
+        "Certificate of Attendance for participating in the Google Developer Student Clubs (GDSC) seminar organized by GDSC IT Telkom Purwokerto and Dicoding Indonesia.",
     },
   ];
 
@@ -105,17 +115,22 @@ export default function CertificationsSection() {
 
       {/* Grid of Certificates */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {certificates.map((cert, index) => (
-          <ScrollReveal
-            key={index}
-            direction="up"
-            delay={index * 0.1 + 0.15}
-            duration={0.6}
-          >
-            <div
-              onClick={() => setSelectedCert(cert)}
-              className="group p-6 bg-white dark:bg-[#161618] border border-neutral-200/80 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-300 cursor-pointer flex flex-col justify-between h-full shadow-xs"
+        {certificates.map((cert, index) => {
+          const isLastOdd =
+            index === certificates.length - 1 && certificates.length % 2 !== 0;
+
+          return (
+            <ScrollReveal
+              key={index}
+              direction="up"
+              delay={index * 0.1 + 0.15}
+              duration={0.6}
+              className={isLastOdd ? "md:col-span-2 md:max-w-xl md:mx-auto w-full" : "h-full"}
             >
+              <div
+                onClick={() => setSelectedCert(cert)}
+                className="group p-6 bg-white dark:bg-[#161618] border border-neutral-200/80 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-300 cursor-pointer flex flex-col justify-between h-full shadow-xs"
+              >
               <div>
                 {/* Top Meta Info */}
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
@@ -171,7 +186,8 @@ export default function CertificationsSection() {
               </div>
             </div>
           </ScrollReveal>
-        ))}
+        );
+      })}
       </div>
 
       {/* Lightbox Modal */}

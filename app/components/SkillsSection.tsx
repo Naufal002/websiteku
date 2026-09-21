@@ -45,13 +45,18 @@ export default function SkillsSection() {
 
       {/* Grid of Skills */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {skills.map((skill, index) => (
-          <ScrollReveal
-            key={index}
-            direction="up"
-            delay={index * 0.04 + 0.1}
-            duration={0.5}
-          >
+        {skills.map((skill, index) => {
+          const isLastOdd =
+            index === skills.length - 1 && skills.length % 2 !== 0;
+
+          return (
+            <ScrollReveal
+              key={index}
+              direction="up"
+              delay={index * 0.04 + 0.1}
+              duration={0.5}
+              className={isLastOdd ? "md:col-span-2 md:max-w-md md:mx-auto w-full" : "h-full"}
+            >
             <div className="flex items-center justify-between p-5 bg-white dark:bg-[#161618] border border-neutral-200/80 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-300 group cursor-default">
               <div className="flex items-center space-x-4">
                 <span className="text-xs font-mono text-neutral-400 dark:text-neutral-500 w-6 text-center shrink-0">
@@ -72,7 +77,8 @@ export default function SkillsSection() {
               </div>
             </div>
           </ScrollReveal>
-        ))}
+        );
+      })}
       </div>
     </section>
   );

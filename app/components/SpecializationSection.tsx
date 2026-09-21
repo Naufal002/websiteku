@@ -91,32 +91,38 @@ export default function SpecializationSection() {
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {specializations.map((spec, index) => (
-          <ScrollReveal
-            key={index}
-            direction="up"
-            delay={index * 0.05 + 0.1}
-            duration={0.5}
-          >
-            <div className="h-full p-8 bg-white dark:bg-[#161618] border border-neutral-200/80 dark:border-neutral-800 shadow-xs hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="font-serif text-xl font-semibold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors">
-                    {spec.title}
-                  </h3>
-                  {spec.kanji && (
-                    <span className="text-xs font-mono text-neutral-400 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800 px-2 py-0.5 rounded-xs bg-neutral-50 dark:bg-neutral-800/40 shrink-0 ml-2">
-                      {spec.kanji}
-                    </span>
-                  )}
+        {specializations.map((spec, index) => {
+          const isLastSingle =
+            index === specializations.length - 1 && specializations.length % 3 === 1;
+
+          return (
+            <ScrollReveal
+              key={index}
+              direction="up"
+              delay={index * 0.05 + 0.1}
+              duration={0.5}
+              className={isLastSingle ? "md:col-span-3 md:max-w-md md:mx-auto w-full" : "h-full"}
+            >
+              <div className="h-full p-8 bg-white dark:bg-[#161618] border border-neutral-200/80 dark:border-neutral-800 shadow-xs hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="font-serif text-xl font-semibold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors">
+                      {spec.title}
+                    </h3>
+                    {spec.kanji && (
+                      <span className="text-xs font-mono text-neutral-400 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800 px-2 py-0.5 rounded-xs bg-neutral-50 dark:bg-neutral-800/40 shrink-0 ml-2">
+                        {spec.kanji}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
+                    {spec.description}
+                  </p>
                 </div>
-                <p className="text-sm text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
-                  {spec.description}
-                </p>
               </div>
-            </div>
-          </ScrollReveal>
-        ))}
+            </ScrollReveal>
+          );
+        })}
       </div>
     </section>
   );
