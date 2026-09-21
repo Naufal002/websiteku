@@ -5,19 +5,19 @@ import ScrollReveal from "./ScrollReveal";
 export default function LogsSection() {
   const logs = [
     {
-      quarter: "2025 // Q1",
-      title: "Finalist: GEMASTIK XVIII 2025",
-      tags: ["[MALWARE ANALYST]", "[MEMORY FORENSIC]", "[NETWORK FORENSIC]", "[LINUX]"],
+      quarter: "2025 // Q3",
+      title: "GEMASTIK XVIII 2025: National Finalist in Digital Forensics Division (Kemendikbudristek)",
+      tags: ["[MALWARE ANALYSIS]", "[MEMORY FORENSICS]", "[NETWORK FORENSICS]", "[LINUX]"],
     },
     {
       quarter: "2024 // Q4",
-      title: "Tantangan CTF: Penyelesaian Pembongkaran Enkripsi Custom Binary Cryptography",
-      tags: ["[CTF]", "[CRYPTO]"],
+      title: "BINUS National Cyber Week (NCW): Custom Binary Cryptography & Encryption Analysis",
+      tags: ["[CTF]", "[CRYPTO]", "[REVERSE ENG]"],
     },
     {
       quarter: "2024 // Q3",
-      title: "Investigasi Jaringan: Membongkar Jejak Intrusi PCAP File dengan Wireshark",
-      tags: ["[FORENSICS]", "[NETWORK]"],
+      title: "UKSW FIT Competition: Cyber Security Challenge & Network Forensics",
+      tags: ["[CYBER SECURITY]", "[FORENSICS]", "[NETWORK]"],
     },
   ];
 

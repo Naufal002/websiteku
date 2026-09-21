@@ -53,7 +53,7 @@ export default function Navbar() {
     { label: "Specialization", href: "#specialization" },
     { label: "Skills", href: "#skills" },
     { label: "Works", href: "#works" },
-    { label: "Logs", href: "#logs" },
+    { label: "CTF", href: "#logs" },
     { label: "Certifications", href: "#certifications" },
     { label: "Contact", href: "#contact" },
   ];
