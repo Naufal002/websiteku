@@ -10,12 +10,22 @@ export default function LogsSection() {
       tags: ["[MALWARE ANALYSIS]", "[MEMORY FORENSICS]", "[NETWORK FORENSICS]", "[LINUX]"],
     },
     {
-      quarter: "2024 // Q4",
+      quarter: "2025 // Q4",
       title: "BINUS National Cyber Week (NCW): In the digital forensics division, tackling memory forensics cases and malware analysis",
       tags: ["[CTF]", "[CRYPTO]", "[REVERSE ENG]"],
     },
     {
-      quarter: "2024 // Q3",
+      quarter: "2026 // Q3",
+      title: "POLINES Techcomfest CTF Competition: Cyber Security Challenge & Network Forensics",
+      tags: ["[CYBER SECURITY]", "[FORENSICS]", "[NETWORK]"],
+    },
+    {
+      quarter: "2026 // Q3",
+      title: "ITS ARA CTF Competition: Cyber Security Challenge & Network Forensics",
+      tags: ["[CYBER SECURITY]", "[FORENSICS]", "[NETWORK]"],
+    },
+    {
+      quarter: "2026 // Q3",
       title: "UKSW FIT Competition: Cyber Security Challenge & Network Forensics",
       tags: ["[CYBER SECURITY]", "[FORENSICS]", "[NETWORK]"],
     },

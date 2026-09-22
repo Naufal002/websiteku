@@ -100,6 +100,16 @@ export default function CertificationsSection() {
       description:
         "Certificate of Attendance for participating in the Google Developer Student Clubs (GDSC) seminar organized by GDSC IT Telkom Purwokerto and Dicoding Indonesia.",
     },
+    {
+      id: "CERT // 08",
+      title: "ICCSET 2024 International Conference",
+      issuer: "Faculty of Engineering - Universitas Muria Kudus",
+      date: "November 2024",
+      image: "/certificates/ICCSET_FT_UMK_.jpg",
+      tags: ["CONFERENCE", "COMPUTER SCIENCE", "AI & TECH", "UMK"],
+      description:
+        "Certificate of Participation in the International Conference on Computer Science and Engineering Technology (ICCSET 2024) themed 'Transforming Industries: The Future of Artificial Intelligence in Manufacturing' (Credential ID: 1761/ICCSET/FT/UMK/XI/2024).",
+    },
   ];
 
   return (
