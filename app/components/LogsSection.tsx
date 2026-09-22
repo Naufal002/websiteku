@@ -11,7 +11,7 @@ export default function LogsSection() {
     },
     {
       quarter: "2024 // Q4",
-      title: "BINUS National Cyber Week (NCW): Custom Binary Cryptography & Encryption Analysis",
+      title: "BINUS National Cyber Week (NCW): In the digital forensics division, tackling memory forensics cases and malware analysis",
       tags: ["[CTF]", "[CRYPTO]", "[REVERSE ENG]"],
     },
     {
