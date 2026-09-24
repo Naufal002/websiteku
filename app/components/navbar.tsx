@@ -104,19 +104,19 @@ export default function Navbar() {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-12 flex items-center justify-between relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between relative">
         {/* Brand Logo */}
         <Link
           href="#"
-          className="font-mono text-xs sm:text-sm tracking-[0.25em] font-bold text-neutral-900 dark:text-white hover:opacity-75 transition-opacity uppercase shrink-0"
+          className="font-mono text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] font-bold text-neutral-900 dark:text-white hover:opacity-75 transition-opacity uppercase shrink-0"
         >
           NAUFAL DEV
         </Link>
 
         {/* Navigation & Controls */}
-        <div className="flex items-center space-x-4 sm:space-x-6 md:space-x-8">
+        <div className="flex items-center space-x-2 sm:space-x-6 md:space-x-8">
           {/* Max 3 Main Nav Links */}
-          <nav className="flex items-center space-x-3 sm:space-x-6 md:space-x-8">
+          <nav className="flex items-center space-x-2.5 sm:space-x-6 md:space-x-8">
             {primaryNavItems.map((item) => (
               <Link
                 key={item.label}
@@ -129,12 +129,12 @@ export default function Navbar() {
           </nav>
 
           {/* Action Buttons: Three-lines Menu + Theme Toggle */}
-          <div className="flex items-center space-x-1 sm:space-x-2 border-l border-neutral-200 dark:border-neutral-800 pl-3 sm:pl-4">
+          <div className="flex items-center space-x-1 sm:space-x-2 border-l border-neutral-200 dark:border-neutral-800 pl-2 sm:pl-4">
             {/* Theme Toggle Button */}
             <button
               onClick={toggleDarkMode}
               type="button"
-              className="p-2 rounded-full text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-200/50 dark:hover:bg-neutral-800/60 transition-all focus:outline-none cursor-pointer"
+              className="p-1.5 sm:p-2 rounded-full text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-200/50 dark:hover:bg-neutral-800/60 transition-all focus:outline-none cursor-pointer"
               title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
               aria-label="Toggle Theme"
             >
@@ -193,7 +193,7 @@ export default function Navbar() {
         {menuOpen && (
           <div
             ref={menuRef}
-            className="absolute right-6 md:right-12 top-full mt-3 w-64 sm:w-72 bg-white/95 dark:bg-[#141416]/95 backdrop-blur-md border border-neutral-200/80 dark:border-neutral-800 p-5 shadow-2xl space-y-4 animate-in fade-in slide-in-from-top-2 duration-200 z-50"
+            className="absolute right-4 sm:right-6 md:right-12 top-full mt-3 w-[calc(100vw-2rem)] max-w-xs sm:w-72 bg-white/95 dark:bg-[#141416]/95 backdrop-blur-md border border-neutral-200/80 dark:border-neutral-800 p-5 shadow-2xl space-y-4 animate-in fade-in slide-in-from-top-2 duration-200 z-50"
           >
             {/* Header label */}
             <div className="text-[10px] font-mono tracking-widest text-neutral-400 dark:text-neutral-500 uppercase flex items-center justify-between border-b border-neutral-100 dark:border-neutral-800/80 pb-2.5">

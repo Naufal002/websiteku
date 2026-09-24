@@ -79,10 +79,10 @@ export default function SpecializationSection() {
   ];
 
   return (
-    <section id="specialization" className="py-20 px-6 md:px-12 max-w-6xl mx-auto">
+    <section id="specialization" className="py-16 sm:py-20 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto">
       {/* Section Label */}
       <ScrollReveal direction="right" delay={0.1}>
-        <div className="flex items-center space-x-3 mb-12 text-xs font-mono tracking-widest text-neutral-400 dark:text-neutral-500 uppercase">
+        <div className="flex items-center space-x-3 mb-8 sm:mb-12 text-xs font-mono tracking-widest text-neutral-400 dark:text-neutral-500 uppercase">
           <span>02</span>
           <span className="w-8 h-[1px] bg-neutral-300 dark:bg-neutral-800"></span>
           <span>SPECIALIZATION</span>
@@ -90,7 +90,7 @@ export default function SpecializationSection() {
       </ScrollReveal>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
         {specializations.map((spec, index) => {
           const isLastSingle =
             index === specializations.length - 1 && specializations.length % 3 === 1;
@@ -103,10 +103,10 @@ export default function SpecializationSection() {
               duration={0.5}
               className={isLastSingle ? "md:col-span-3 md:max-w-md md:mx-auto w-full" : "h-full"}
             >
-              <div className="h-full p-8 bg-white dark:bg-[#161618] border border-neutral-200/80 dark:border-neutral-800 shadow-xs hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group">
+              <div className="h-full p-5 sm:p-8 bg-white dark:bg-[#161618] border border-neutral-200/80 dark:border-neutral-800 shadow-xs hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group">
                 <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <h3 className="font-serif text-xl font-semibold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors">
+                  <div className="flex items-center justify-between mb-4 sm:mb-6">
+                    <h3 className="font-serif text-lg sm:text-xl font-semibold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors">
                       {spec.title}
                     </h3>
                     {spec.kanji && (

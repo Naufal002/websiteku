@@ -6,24 +6,24 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function FooterSection() {
   return (
-    <footer id="contact" className="relative pt-24 pb-12 px-6 md:px-12 max-w-6xl mx-auto border-t border-neutral-200/80 dark:border-neutral-800 mt-20 transition-colors duration-300">
+    <footer id="contact" className="relative pt-16 sm:pt-24 pb-10 sm:pb-12 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto border-t border-neutral-200/80 dark:border-neutral-800 mt-12 sm:mt-20 transition-colors duration-300">
       {/* Right Kanji Accent (終焉の円 - Enlarged) */}
       <ScrollReveal direction="left" delay={0.3}>
-        <div className="absolute right-6 md:right-12 top-28 opacity-80 hover:opacity-100 transition-all dark-invert-asset z-10">
+        <div className="absolute right-4 sm:right-6 md:right-12 top-20 sm:top-28 opacity-40 sm:opacity-80 hover:opacity-100 transition-all dark-invert-asset z-10 pointer-events-none">
           <Image
             src="/asset/tile-14-kanji-accent-footer.png"
             alt="Kanji Accent Footer - 終焉の円"
             width={42}
             height={220}
-            className="object-contain w-9 sm:w-11 h-auto"
+            className="object-contain w-8 sm:w-11 h-auto"
           />
         </div>
       </ScrollReveal>
 
       {/* Top Divider Art */}
       <ScrollReveal direction="down" delay={0.1}>
-        <div className="flex items-center justify-center space-x-6 text-neutral-300 dark:text-neutral-700 mb-16">
-          <span className="w-12 sm:w-24 h-[1px] bg-neutral-200 dark:bg-neutral-800"></span>
+        <div className="flex items-center justify-center space-x-4 sm:space-x-6 text-neutral-300 dark:text-neutral-700 mb-10 sm:mb-16">
+          <span className="w-8 sm:w-24 h-[1px] bg-neutral-200 dark:bg-neutral-800"></span>
           <div className="flex items-center space-x-3">
             <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 dark:bg-neutral-600"></span>
             <Image
@@ -31,20 +31,20 @@ export default function FooterSection() {
               alt="Zen Garden Art Divider"
               width={40}
               height={20}
-              className="object-contain opacity-70 dark-invert-asset"
+              className="object-contain opacity-70 dark-invert-asset w-8 sm:w-10 h-auto"
             />
             <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 dark:bg-neutral-600"></span>
           </div>
-          <span className="w-12 sm:w-24 h-[1px] bg-neutral-200 dark:bg-neutral-800"></span>
+          <span className="w-8 sm:w-24 h-[1px] bg-neutral-200 dark:bg-neutral-800"></span>
         </div>
       </ScrollReveal>
 
       {/* Contact Content Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-12 items-center mb-12 sm:mb-20">
         {/* Left Call to Action & Email */}
-        <div className="md:col-span-8 space-y-8">
+        <div className="md:col-span-8 space-y-6 sm:space-y-8">
           <ScrollReveal direction="up" delay={0.25} duration={0.8}>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-neutral-900 dark:text-white leading-tight">
+            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light text-neutral-900 dark:text-white leading-tight">
               Let’s start a new conversation or collaborate.
             </h2>
           </ScrollReveal>
@@ -55,8 +55,8 @@ export default function FooterSection() {
                 DIRECT MAIL
               </span>
               <a
-                href="mailto:naufal.rig@gmail.com"
-                className="inline-block font-serif text-2xl sm:text-3xl text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 underline underline-offset-8 decoration-neutral-300 dark:decoration-neutral-700 hover:decoration-neutral-800 dark:hover:decoration-neutral-300 transition-all"
+                href="mailto:naufalrizqiilhamgibran002@gmail.com"
+                className="inline-block font-serif text-base sm:text-2xl md:text-3xl text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 underline underline-offset-4 sm:underline-offset-8 decoration-neutral-300 dark:decoration-neutral-700 hover:decoration-neutral-800 dark:hover:decoration-neutral-300 transition-all break-all sm:break-normal"
               >
                 naufalrizqiilhamgibran002@gmail.com
               </a>
@@ -65,9 +65,9 @@ export default function FooterSection() {
         </div>
 
         {/* Right Large Enso Art */}
-        <div className="md:col-span-4 flex justify-start md:justify-end">
+        <div className="md:col-span-4 flex justify-center md:justify-end">
           <ScrollReveal direction="left" delay={0.4}>
-            <div className="relative w-36 h-36 sm:w-44 sm:h-44 opacity-80 hover:opacity-100 transition-opacity dark-invert-asset">
+            <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 opacity-80 hover:opacity-100 transition-opacity dark-invert-asset">
               <Image
                 src="/asset/tile-15-enso-large.png"
                 alt="Ensō Large Art"
@@ -81,13 +81,13 @@ export default function FooterSection() {
 
       {/* Bottom Legal & Social Icon Logos */}
       <ScrollReveal direction="up" delay={0.5}>
-        <div className="pt-8 border-t border-neutral-200/60 dark:border-neutral-800 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 dark:text-neutral-400 font-mono gap-6">
+        <div className="pt-6 sm:pt-8 border-t border-neutral-200/60 dark:border-neutral-800 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 dark:text-neutral-400 font-mono gap-4 sm:gap-6 text-center sm:text-left">
           <div>
             © 2025 Naufal Rizqi Ilham Gibran. All rights reserved.
           </div>
 
           {/* Social Icon Logos (Enlarged) */}
-          <div className="flex items-center space-x-3 sm:space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             {/* LinkedIn */}
             <Link
               href="https://linkedin.com"

@@ -113,10 +113,10 @@ export default function CertificationsSection() {
   ];
 
   return (
-    <section id="certifications" className="py-20 px-6 md:px-12 max-w-6xl mx-auto">
+    <section id="certifications" className="py-16 sm:py-20 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto">
       {/* Section Label */}
       <ScrollReveal direction="right" delay={0.1}>
-        <div className="flex items-center space-x-3 mb-12 text-xs font-mono tracking-widest text-neutral-400 dark:text-neutral-500 uppercase">
+        <div className="flex items-center space-x-3 mb-8 sm:mb-12 text-xs font-mono tracking-widest text-neutral-400 dark:text-neutral-500 uppercase">
           <span>06</span>
           <span className="w-8 h-[1px] bg-neutral-300 dark:bg-neutral-800"></span>
           <span>CERTIFICATIONS & CREDENTIALS</span>
@@ -124,7 +124,7 @@ export default function CertificationsSection() {
       </ScrollReveal>
 
       {/* Grid of Certificates */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         {certificates.map((cert, index) => {
           const isLastOdd =
             index === certificates.length - 1 && certificates.length % 2 !== 0;
@@ -139,11 +139,11 @@ export default function CertificationsSection() {
             >
               <div
                 onClick={() => setSelectedCert(cert)}
-                className="group p-6 bg-white dark:bg-[#161618] border border-neutral-200/80 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-300 cursor-pointer flex flex-col justify-between h-full shadow-xs"
+                className="group p-4 sm:p-6 bg-white dark:bg-[#161618] border border-neutral-200/80 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-300 cursor-pointer flex flex-col justify-between h-full shadow-xs"
               >
               <div>
                 {/* Top Meta Info */}
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4">
                   <span className="text-xs font-mono text-neutral-400 dark:text-neutral-500 tracking-wider">
                     {cert.id}
                   </span>
@@ -153,7 +153,7 @@ export default function CertificationsSection() {
                 </div>
 
                 {/* Certificate Image Thumbnail Preview */}
-                <div className="relative w-full h-48 mb-6 overflow-hidden bg-neutral-100 dark:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800/80 group-hover:opacity-95 transition-opacity">
+                <div className="relative w-full h-40 sm:h-48 mb-4 sm:mb-6 overflow-hidden bg-neutral-100 dark:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800/80 group-hover:opacity-95 transition-opacity">
                   <Image
                     src={cert.image}
                     alt={cert.title}
@@ -161,34 +161,34 @@ export default function CertificationsSection() {
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="text-xs font-mono text-white bg-black/70 px-3 py-1.5 uppercase tracking-wider backdrop-blur-xs">
+                    <span className="text-[11px] sm:text-xs font-mono text-white bg-black/70 px-2.5 sm:px-3 py-1 sm:py-1.5 uppercase tracking-wider backdrop-blur-xs">
                       View Certificate 🔍
                     </span>
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-serif text-xl font-medium text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-neutral-100 transition-colors mb-2">
+                <h3 className="font-serif text-lg sm:text-xl font-medium text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-neutral-100 transition-colors mb-2">
                   {cert.title}
                 </h3>
 
                 {/* Issuer */}
-                <p className="text-xs font-mono text-neutral-500 dark:text-neutral-400 mb-4 uppercase tracking-wide">
+                <p className="text-xs font-mono text-neutral-500 dark:text-neutral-400 mb-3 sm:mb-4 uppercase tracking-wide">
                   ISSUER: {cert.issuer}
                 </p>
 
                 {/* Description */}
-                <p className="text-sm text-neutral-600 dark:text-neutral-300 font-light leading-relaxed mb-6">
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 font-light leading-relaxed mb-4 sm:mb-6">
                   {cert.description}
                 </p>
               </div>
 
               {/* Tags Badges */}
-              <div className="flex flex-wrap gap-2 pt-4 border-t border-neutral-100 dark:border-neutral-800/60">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-3 sm:pt-4 border-t border-neutral-100 dark:border-neutral-800/60">
                 {cert.tags.map((tag, tIndex) => (
                   <span
                     key={tIndex}
-                    className="text-[10px] font-mono text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 px-2 py-0.5 rounded-none uppercase"
+                    className="text-[9px] sm:text-[10px] font-mono text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 px-2 py-0.5 rounded-none uppercase"
                   >
                     {tag}
                   </span>
@@ -203,30 +203,30 @@ export default function CertificationsSection() {
       {/* Lightbox Modal */}
       {selectedCert && (
         <div
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6"
           onClick={() => setSelectedCert(null)}
         >
           <div
-            className="relative bg-white dark:bg-[#161618] border border-neutral-200 dark:border-neutral-800 max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-2xl"
+            className="relative bg-white dark:bg-[#161618] border border-neutral-200 dark:border-neutral-800 max-w-4xl w-full max-h-[92vh] overflow-y-auto p-4 sm:p-8 space-y-4 sm:space-y-6 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={() => setSelectedCert(null)}
-              className="absolute top-4 right-4 p-2 text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl font-mono cursor-pointer"
+              className="absolute top-3 sm:top-4 right-3 sm:right-4 p-2 text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg sm:text-xl font-mono cursor-pointer"
               aria-label="Close modal"
             >
               ✕
             </button>
 
             {/* Header */}
-            <div>
-              <div className="flex items-center space-x-3 text-xs font-mono text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-2">
+            <div className="pr-8">
+              <div className="flex items-center space-x-2 sm:space-x-3 text-xs font-mono text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-1.5 sm:mb-2">
                 <span>{selectedCert.id}</span>
                 <span>•</span>
                 <span>{selectedCert.date}</span>
               </div>
-              <h2 className="font-serif text-2xl sm:text-3xl text-neutral-900 dark:text-white">
+              <h2 className="font-serif text-xl sm:text-2xl md:text-3xl text-neutral-900 dark:text-white">
                 {selectedCert.title}
               </h2>
               <p className="text-xs font-mono text-neutral-500 dark:text-neutral-400 mt-1 uppercase">
@@ -235,7 +235,7 @@ export default function CertificationsSection() {
             </div>
 
             {/* Full Image */}
-            <div className="relative w-full min-h-[300px] max-h-[60vh] h-[50vh] bg-neutral-100 dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 overflow-hidden">
+            <div className="relative w-full h-[32vh] sm:h-[45vh] md:h-[50vh] min-h-[200px] max-h-[60vh] bg-neutral-100 dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 overflow-hidden">
               <Image
                 src={selectedCert.image}
                 alt={selectedCert.title}
@@ -245,15 +245,15 @@ export default function CertificationsSection() {
             </div>
 
             {/* Description & Tags */}
-            <div className="space-y-4">
-              <p className="text-sm text-neutral-700 dark:text-neutral-300 font-light leading-relaxed">
+            <div className="space-y-3 sm:space-y-4">
+              <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-light leading-relaxed">
                 {selectedCert.description}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {selectedCert.tags.map((tag, tIndex) => (
                   <span
                     key={tIndex}
-                    className="text-[10px] font-mono text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 px-2.5 py-1 uppercase"
+                    className="text-[9px] sm:text-[10px] font-mono text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 px-2 py-0.5 sm:px-2.5 sm:py-1 uppercase"
                   >
                     {tag}
                   </span>
