@@ -27,7 +27,7 @@ export default function ArtifactsSection() {
     },
     {
       id: "PROJECT // 04",
-      tags: ["Website", "Next.js", "TypeScript", "POS System"],
+      tags: ["Website", "Next.js", "TypeScript", "POS System", "Supabase"],
       title: "Kasir Pulsa",
       description:
         "A web-based POS cashier system tailored for mobile credit and digital top-up sales, seamlessly integrated with barcode scanners and thermal receipt printers for fast checkout workflows.",
