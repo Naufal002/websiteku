@@ -6,17 +6,31 @@ export default function ArtifactsSection() {
   const artifacts = [
     {
       id: "PROJECT // 01",
-      tags: ["Mobile Apps", "Flutter", "Dart", "Firebase","GroqAI API"],
+      tags: ["Internet of Things (IoT)", "Arduino Uno", "C++ for Arduino"],
+      title: "SmartGarden",
+      description:
+        "An automated IoT smart gardening system built with Arduino Uno and C++, monitoring environmental conditions and automating irrigation to maintain optimal plant health.",
+    },
+    {
+      id: "PROJECT // 02",
+      tags: ["Mobile Apps", "Flutter", "Dart", "Firebase", "GroqAI API"],
       title: "CuanTrack",
       description:
         "A mobile app designed to help you monitor your finances and manage your savings, and which can also be used to keep track of your cash.",
     },
     {
-      id: "PROJECT // 02",
-      tags: ["Mobile Apps","Flutter", "Dart", "SupaBase"],
+      id: "PROJECT // 03",
+      tags: ["Mobile Apps", "Flutter", "Dart", "Supabase"],
       title: "Pantau",
       description:
         "A mobile app designed for school pupil attendance that can be used in real time, utilising GPS as a reference point for attendance.",
+    },
+    {
+      id: "PROJECT // 04",
+      tags: ["Website", "Next.js", "TypeScript", "POS System"],
+      title: "Kasir Pulsa",
+      description:
+        "A web-based POS cashier system tailored for mobile credit and digital top-up sales, seamlessly integrated with barcode scanners and thermal receipt printers for fast checkout workflows.",
     },
   ];
 
