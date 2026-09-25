@@ -110,6 +110,16 @@ export default function CertificationsSection() {
       description:
         "Certificate of Participation in the International Conference on Computer Science and Engineering Technology (ICCSET 2024) themed 'Transforming Industries: The Future of Artificial Intelligence in Manufacturing' (Credential ID: 1761/ICCSET/FT/UMK/XI/2024).",
     },
+    {
+      id: "CERT // 09",
+      title: "Techcomfest CTF Competition 2026",
+      issuer: "Politeknik Negeri Semarang (Polines)",
+      date: "January 2026",
+      image: "/certificates/Naufal Rizqi Ilham Gibran_page_techcomfest.jpg",
+      tags: ["CTF", "CYBER SECURITY", "COMPETITION"],
+      description:
+        "Certificate of Participation as a Contestant in the Techcomfest Capture The Flag Competition 2026, themed 'SYNC REALITY: Shaping the Future of Digital Experience'.",
+    },
   ];
 
   return (
