@@ -3,8 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function FooterSection() {
+  const { lang } = useLanguage();
+
   return (
     <footer id="contact" className="relative pt-16 sm:pt-24 pb-10 sm:pb-12 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto border-t border-neutral-200/80 dark:border-neutral-800 mt-12 sm:mt-20 transition-colors duration-300">
       {/* Right Kanji Accent (終焉の円 - Enlarged) */}
@@ -45,14 +48,16 @@ export default function FooterSection() {
         <div className="md:col-span-8 space-y-6 sm:space-y-8">
           <ScrollReveal direction="up" delay={0.25} duration={0.8}>
             <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light text-neutral-900 dark:text-white leading-tight">
-              Let’s start a new conversation or collaborate.
+              {lang === "id"
+                ? "Mari mulai percakapan baru atau berkolaborasi."
+                : "Let’s start a new conversation or collaborate."}
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.35}>
             <div className="space-y-2">
               <span className="block text-xs font-mono text-neutral-400 dark:text-neutral-500 uppercase tracking-widest">
-                DIRECT MAIL
+                {lang === "id" ? "SUREL LANGSUNG" : "DIRECT MAIL"}
               </span>
               <a
                 href="mailto:naufalrizqiilhamgibran002@gmail.com"
@@ -83,7 +88,9 @@ export default function FooterSection() {
       <ScrollReveal direction="up" delay={0.5}>
         <div className="pt-6 sm:pt-8 border-t border-neutral-200/60 dark:border-neutral-800 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 dark:text-neutral-400 font-mono gap-4 sm:gap-6 text-center sm:text-left">
           <div>
-            © 2025 Naufal Rizqi Ilham Gibran. All rights reserved.
+            {lang === "id"
+              ? "© 2025 Naufal Rizqi Ilham Gibran. Hak cipta dilindungi undang-undang."
+              : "© 2025 Naufal Rizqi Ilham Gibran. All rights reserved."}
           </div>
 
           {/* Social Icon Logos (Enlarged) */}

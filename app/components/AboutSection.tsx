@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function AboutSection() {
+  const { lang } = useLanguage();
+
   return (
     <section id="about" className="relative py-16 sm:py-20 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto">
       {/* Right Kanji Accent (自己紹介 - Enlarged) */}
@@ -24,7 +27,7 @@ export default function AboutSection() {
         <div className="flex items-center space-x-3 mb-8 sm:mb-12 text-xs font-mono tracking-widest text-neutral-400 dark:text-neutral-500 uppercase">
           <span>01</span>
           <span className="w-8 h-[1px] bg-neutral-300 dark:bg-neutral-800"></span>
-          <span>ABOUT ME</span>
+          <span>{lang === "id" ? "TENTANG SAYA" : "ABOUT ME"}</span>
         </div>
       </ScrollReveal>
 
@@ -44,7 +47,9 @@ export default function AboutSection() {
                 />
               </div>
               <p className="font-serif text-sm font-semibold text-neutral-800 dark:text-neutral-200 leading-relaxed">
-                Balancing logical precision with creative intuition in unravelling the mysteries of technology.
+                {lang === "id" 
+                  ? "Menyeimbangkan presisi logika dengan intuisi kreatif dalam memecahkan misteri teknologi."
+                  : "Balancing logical precision with creative intuition in unravelling the mysteries of technology."}
               </p>
             </div>
           </ScrollReveal>
@@ -54,17 +59,23 @@ export default function AboutSection() {
         <div className="md:col-span-7 space-y-6 text-neutral-600 dark:text-neutral-300 font-sans leading-relaxed text-sm md:text-base font-light">
           <ScrollReveal direction="up" delay={0.35}>
             <p>
-              Based in Kudus, Indonesia, I’m an Informatics Engineering student and software developer focused on building web and mobile applications with Next.js, Astro, Node.js, Flutter, and Python.
+              {lang === "id"
+                ? "Berbasis di Kudus, Indonesia, saya adalah seorang mahasiswa Teknik Informatika dan pengembang perangkat lunak yang berfokus pada pembuatan aplikasi web dan mobile dengan Next.js, Astro, Node.js, Flutter, dan Python."
+                : "Based in Kudus, Indonesia, I’m an Informatics Engineering student and software developer focused on building web and mobile applications with Next.js, Astro, Node.js, Flutter, and Python."}
             </p>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.45}>
             <p>
-              I enjoy working across the entire development process — from designing databases and developing APIs to building clean, functional user interfaces. I’m also interested in cybersecurity, particularly digital forensics and blue-team security.
+              {lang === "id"
+                ? "Saya senang bekerja di seluruh proses pengembangan — mulai dari merancang basis data dan mengembangkan API hingga membangun antarmuka pengguna yang fungsional dan bersih. Saya juga tertarik pada keamanan siber, khususnya forensik digital dan keamanan blue-team."
+                : "I enjoy working across the entire development process — from designing databases and developing APIs to building clean, functional user interfaces. I’m also interested in cybersecurity, particularly digital forensics and blue-team security."}
             </p>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.55}>
             <p>
-              My experience includes developing software projects, exploring backend and mobile development, and participating in cybersecurity competitions such as GEMASTIK in the Cyber Security division. I’m continuously improving my skills by building real-world projects, solving technical challenges, and exploring new technologies.
+              {lang === "id"
+                ? "Pengalaman saya mencakup pengembangan proyek perangkat lunak, eksplorasi pengembangan backend dan mobile, serta berpartisipasi dalam kompetisi keamanan siber seperti GEMASTIK di divisi Keamanan Siber. Saya terus meningkatkan kemampuan dengan membangun proyek dunia nyata, memecahkan tantangan teknis, dan mengeksplorasi teknologi baru."
+                : "My experience includes developing software projects, exploring backend and mobile development, and participating in cybersecurity competitions such as GEMASTIK in the Cyber Security division. I’m continuously improving my skills by building real-world projects, solving technical challenges, and exploring new technologies."}
             </p>
           </ScrollReveal>
         </div>

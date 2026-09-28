@@ -1,36 +1,43 @@
 "use client";
 
 import ScrollReveal from "./ScrollReveal";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function ArtifactsSection() {
+  const { lang } = useLanguage();
+
   const artifacts = [
     {
       id: "PROJECT // 01",
       tags: ["Internet of Things (IoT)", "Arduino Uno", "C++ for Arduino"],
       title: "SmartGarden",
-      description:
-        "An automated IoT smart gardening system built with Arduino Uno and C++, monitoring environmental conditions and automating irrigation to maintain optimal plant health.",
+      description: lang === "id"
+        ? "Sistem berkebun pintar IoT otomatis yang dibangun dengan Arduino Uno dan C++, untuk memantau kondisi lingkungan dan mengotomatiskan irigasi guna menjaga kesehatan tanaman yang optimal."
+        : "An automated IoT smart gardening system built with Arduino Uno and C++, monitoring environmental conditions and automating irrigation to maintain optimal plant health.",
     },
     {
       id: "PROJECT // 02",
       tags: ["Mobile Apps", "Flutter", "Dart", "Firebase", "GroqAI API"],
       title: "CuanTrack",
-      description:
-        "A mobile app designed to help you monitor your finances and manage your savings, and which can also be used to keep track of your cash.",
+      description: lang === "id"
+        ? "Aplikasi mobile yang dirancang untuk membantu Anda memantau keuangan dan mengelola tabungan, serta dapat digunakan untuk melacak pengeluaran kas Anda."
+        : "A mobile app designed to help you monitor your finances and manage your savings, and which can also be used to keep track of your cash.",
     },
     {
       id: "PROJECT // 03",
       tags: ["Mobile Apps", "Flutter", "Dart", "Supabase"],
       title: "Pantau",
-      description:
-        "A mobile app designed for school pupil attendance that can be used in real time, utilising GPS as a reference point for attendance.",
+      description: lang === "id"
+        ? "Aplikasi mobile yang dirancang untuk presensi siswa sekolah yang dapat digunakan secara real-time, memanfaatkan GPS sebagai titik acuan untuk kehadiran."
+        : "A mobile app designed for school pupil attendance that can be used in real time, utilising GPS as a reference point for attendance.",
     },
     {
       id: "PROJECT // 04",
       tags: ["Website", "Next.js", "TypeScript", "POS System", "Supabase"],
       title: "Kasir Pulsa",
-      description:
-        "A web-based POS cashier system tailored for mobile credit and digital top-up sales, seamlessly integrated with barcode scanners and thermal receipt printers for fast checkout workflows.",
+      description: lang === "id"
+        ? "Sistem kasir POS berbasis web yang disesuaikan untuk penjualan pulsa seluler dan top-up digital, terintegrasi mulus dengan pemindai barcode dan printer struk termal untuk alur kerja checkout yang cepat."
+        : "A web-based POS cashier system tailored for mobile credit and digital top-up sales, seamlessly integrated with barcode scanners and thermal receipt printers for fast checkout workflows.",
     },
   ];
 
@@ -41,7 +48,7 @@ export default function ArtifactsSection() {
         <div className="flex items-center space-x-3 mb-8 sm:mb-12 text-xs font-mono tracking-widest text-neutral-400 dark:text-neutral-500 uppercase">
           <span>04</span>
           <span className="w-8 h-[1px] bg-neutral-300 dark:bg-neutral-800"></span>
-          <span>SELECTED WORK</span>
+          <span>{lang === "id" ? "KARYA TERPILIH" : "SELECTED WORK"}</span>
         </div>
       </ScrollReveal>
 

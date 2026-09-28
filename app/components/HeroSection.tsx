@@ -3,8 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function HeroSection() {
+  const { lang } = useLanguage();
+
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-between pt-28 sm:pt-32 pb-10 sm:pb-12 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto">
       {/* Top Main Area: Title + Right Vertical Kanji Accent */}
@@ -24,7 +27,9 @@ export default function HeroSection() {
           <ScrollReveal direction="up" delay={0.3} duration={0.8}>
             <div className="border-l-2 border-neutral-300 dark:border-neutral-700 pl-4 sm:pl-6 py-1">
               <p className="font-serif text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 italic font-light max-w-xl leading-relaxed">
-                &quot;Full-stack web developer and mobile apps developer with an interest in cyber security&quot;
+                {lang === "id" 
+                  ? '"Pengembang web full-stack dan aplikasi mobile dengan ketertarikan pada keamanan siber"'
+                  : '"Full-stack web developer and mobile apps developer with an interest in cyber security"'}
               </p>
             </div>
           </ScrollReveal>
@@ -49,7 +54,7 @@ export default function HeroSection() {
       <ScrollReveal direction="up" delay={0.5} duration={0.8}>
         <div className="pt-12 sm:pt-20 flex items-end justify-between text-xs text-neutral-500 dark:text-neutral-400 uppercase tracking-wider font-mono gap-2">
           <div>
-            <span className="block text-[10px] text-neutral-400 dark:text-neutral-500 mb-0.5 sm:mb-1">BASED IN</span>
+            <span className="block text-[10px] text-neutral-400 dark:text-neutral-500 mb-0.5 sm:mb-1">{lang === "id" ? "BERBASIS DI" : "BASED IN"}</span>
             <span className="font-semibold text-neutral-800 dark:text-neutral-200 text-xs sm:text-sm normal-case font-sans">
               Kudus, Indonesia
             </span>
@@ -59,7 +64,7 @@ export default function HeroSection() {
             href="#about"
             className="flex items-center space-x-1.5 sm:space-x-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white transition-colors cursor-pointer group shrink-0"
           >
-            <span className="tracking-widest text-[10px] sm:text-[11px]">Scroll to observe</span>
+            <span className="tracking-widest text-[10px] sm:text-[11px]">{lang === "id" ? "Gulir ke bawah" : "Scroll to observe"}</span>
             <Image
               src="/asset/tile-02-arrow-down.png"
               alt="Scroll down"

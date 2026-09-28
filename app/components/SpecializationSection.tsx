@@ -1,80 +1,95 @@
 "use client";
 
 import ScrollReveal from "./ScrollReveal";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function SpecializationSection() {
+  const { lang } = useLanguage();
+
   const specializations = [
     {
       title: "Python",
       kanji: "蛇",
-      description:
-        "Writing high-efficiency Python scripts for data processing, automation pipelines, machine learning integration, and security tooling.",
+      description: lang === "id"
+        ? "Menulis skrip Python berekfisiensi tinggi untuk pemrosesan data, pipeline otomatisasi, integrasi machine learning, dan alat keamanan."
+        : "Writing high-efficiency Python scripts for data processing, automation pipelines, machine learning integration, and security tooling.",
     },
     {
       title: "TypeScript",
       kanji: "型語",
-      description:
-        "Leveraging strong static typing and modern TypeScript paradigms to build robust, error-resistant, and maintainable software applications.",
+      description: lang === "id"
+        ? "Memanfaatkan pengetikan statis yang kuat dan paradigma TypeScript modern untuk membangun aplikasi yang kokoh, tahan error, dan mudah dirawat."
+        : "Leveraging strong static typing and modern TypeScript paradigms to build robust, error-resistant, and maintainable software applications.",
     },
     {
       title: "Java",
       kanji: "堅牢",
-      description:
-        "Developing enterprise-grade, object-oriented applications with a focus on platform stability, multithreading, and clean OOP design patterns.",
+      description: lang === "id"
+        ? "Mengembangkan aplikasi berorientasi objek tingkat perusahaan dengan fokus pada stabilitas platform, multithreading, dan pola desain OOP yang bersih."
+        : "Developing enterprise-grade, object-oriented applications with a focus on platform stability, multithreading, and clean OOP design patterns.",
     },
     {
       title: "JavaScript",
       kanji: "動態",
-      description:
-        "Crafting interactive, dynamic web applications and scalable asynchronous services using modern ECMAScript standards.",
+      description: lang === "id"
+        ? "Menciptakan aplikasi web interaktif, dinamis, dan layanan asinkron terukur menggunakan standar ECMAScript modern."
+        : "Crafting interactive, dynamic web applications and scalable asynchronous services using modern ECMAScript standards.",
     },
     {
-      title: "Mobile Apps Developer",
+      title: lang === "id" ? "Pengembang Aplikasi Mobile" : "Mobile Apps Developer",
       kanji: "移動",
-      description:
-        "Crafting intuitive, cross-platform mobile applications using Flutter with clean state management and responsive UI design.",
+      description: lang === "id"
+        ? "Menciptakan aplikasi mobile lintas platform yang intuitif menggunakan Flutter dengan manajemen state yang bersih dan desain UI responsif."
+        : "Crafting intuitive, cross-platform mobile applications using Flutter with clean state management and responsive UI design.",
     },
     {
-      title: "Fullstack Web Developer",
+      title: lang === "id" ? "Pengembang Web Fullstack" : "Fullstack Web Developer",
       kanji: "構築",
-      description:
-        "Building modern, high-performance web applications leveraging Next.js, React, and robust backend APIs for seamless user experiences.",
+      description: lang === "id"
+        ? "Membangun aplikasi web modern dan berkinerja tinggi menggunakan Next.js, React, dan API backend yang kokoh untuk pengalaman pengguna yang mulus."
+        : "Building modern, high-performance web applications leveraging Next.js, React, and robust backend APIs for seamless user experiences.",
     },
     {
-      title: "Software Architecture",
+      title: lang === "id" ? "Arsitektur Perangkat Lunak" : "Software Architecture",
       kanji: "創造",
-      description:
-        "Designing scalable, efficient, and modular application architectures with a strong focus on high performance, clean code, and maintainability.",
+      description: lang === "id"
+        ? "Merancang arsitektur aplikasi yang terukur, efisien, dan modular dengan fokus pada kinerja tinggi, kode yang bersih, dan kemudahan perawatan."
+        : "Designing scalable, efficient, and modular application architectures with a strong focus on high performance, clean code, and maintainability.",
     },
     {
-      title: "Automation & Data",
+      title: lang === "id" ? "Otomatisasi & Data" : "Automation & Data",
       kanji: "自動",
-      description:
-        "Developing automated tools to streamline complex workflows, process large-scale data volumes, and seamlessly integrate AI services.",
+      description: lang === "id"
+        ? "Mengembangkan alat otomatisasi untuk menyederhanakan alur kerja yang kompleks, memproses volume data berskala besar, dan mengintegrasikan layanan AI."
+        : "Developing automated tools to streamline complex workflows, process large-scale data volumes, and seamlessly integrate AI services.",
     },
     {
-      title: "Digital Forensics",
+      title: lang === "id" ? "Forensik Digital" : "Digital Forensics",
       kanji: "究明",
-      description:
-        "Conducting in-depth malware analysis, cyber incident response, and digital artifact extraction to identify critical security anomalies.",
+      description: lang === "id"
+        ? "Melakukan analisis malware mendalam, respons insiden siber, dan ekstraksi artefak digital untuk mengidentifikasi anomali keamanan yang kritis."
+        : "Conducting in-depth malware analysis, cyber incident response, and digital artifact extraction to identify critical security anomalies.",
     },
     {
       title: "Linux",
       kanji: "基盤",
-      description:
-        "Configuring, hardening, and managing Linux environments with shell scripting for automated system administration and security workflows.",
+      description: lang === "id"
+        ? "Mengonfigurasi, memperkuat, dan mengelola lingkungan Linux dengan skrip shell untuk administrasi sistem otomatis dan alur kerja keamanan."
+        : "Configuring, hardening, and managing Linux environments with shell scripting for automated system administration and security workflows.",
     },
     {
-      title: "Firebase Integration",
+      title: lang === "id" ? "Integrasi Firebase" : "Firebase Integration",
       kanji: "雲端",
-      description:
-        "Integrating real-time databases, authentication mechanisms, cloud functions, and cloud storage into production-ready applications.",
+      description: lang === "id"
+        ? "Mengintegrasikan database real-time, mekanisme otentikasi, cloud functions, dan cloud storage ke dalam aplikasi siap pakai."
+        : "Integrating real-time databases, authentication mechanisms, cloud functions, and cloud storage into production-ready applications.",
     },
     {
       title: "Internet of Things (IoT)",
       kanji: "物連",
-      description:
-        "Designing smart embedded IoT systems, integrating microcontrollers with sensors, cloud connectivity, edge computing, and real-time telemetry pipelines.",
+      description: lang === "id"
+        ? "Merancang sistem IoT cerdas, mengintegrasikan mikrokontroler dengan sensor, konektivitas cloud, komputasi edge, dan pipeline telemetri real-time."
+        : "Designing smart embedded IoT systems, integrating microcontrollers with sensors, cloud connectivity, edge computing, and real-time telemetry pipelines.",
     },
   ];
 
@@ -85,7 +100,7 @@ export default function SpecializationSection() {
         <div className="flex items-center space-x-3 mb-8 sm:mb-12 text-xs font-mono tracking-widest text-neutral-400 dark:text-neutral-500 uppercase">
           <span>02</span>
           <span className="w-8 h-[1px] bg-neutral-300 dark:bg-neutral-800"></span>
-          <span>SPECIALIZATION</span>
+          <span>{lang === "id" ? "SPESIALISASI" : "SPECIALIZATION"}</span>
         </div>
       </ScrollReveal>
 

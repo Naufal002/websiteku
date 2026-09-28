@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
+import { useLanguage } from "../context/LanguageContext";
 
 interface Certificate {
   id: string;
@@ -16,6 +17,7 @@ interface Certificate {
 
 export default function CertificationsSection() {
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
+  const { lang } = useLanguage();
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -37,8 +39,9 @@ export default function CertificationsSection() {
       date: "October 2025",
       image: "/certificates/1770628755057.jpg",
       tags: ["CYBER SECURITY", "NATIONAL COMPETITION", "FINALIST"],
-      description:
-        "Recognized as a national finalist in GEMASTIK XVIII (Pagelaran Mahasiswa Nasional Bidang TIK) 2025 in the Cyber Security / Digital Forensics division.",
+      description: lang === "id"
+        ? "Diakui sebagai finalis nasional pada GEMASTIK XVIII (Pagelaran Mahasiswa Nasional Bidang TIK) 2025 pada divisi Keamanan Siber / Forensik Digital."
+        : "Recognized as a national finalist in GEMASTIK XVIII (Pagelaran Mahasiswa Nasional Bidang TIK) 2025 in the Cyber Security / Digital Forensics division.",
     },
     {
       id: "CERT // 02",
@@ -47,8 +50,9 @@ export default function CertificationsSection() {
       date: "June 2026",
       image: "/certificates/Naufal Rizki Ilham Gibran_page-0001.jpg",
       tags: ["CYBER SECURITY", "COMPETITION", "UKSW"],
-      description:
-        "Certificate of Appreciation as a Contestant in the Cyber Security Category at FIT Competition 2026 under the theme 'Digital Impact For Humanitarian Response and Global Well-Being'.",
+      description: lang === "id"
+        ? "Sertifikat Penghargaan sebagai Peserta Kategori Keamanan Siber pada FIT Competition 2026 dengan tema 'Digital Impact For Humanitarian Response and Global Well-Being'."
+        : "Certificate of Appreciation as a Contestant in the Cyber Security Category at FIT Competition 2026 under the theme 'Digital Impact For Humanitarian Response and Global Well-Being'.",
     },
     {
       id: "CERT // 03",
@@ -57,8 +61,9 @@ export default function CertificationsSection() {
       date: "November 2024",
       image: "/certificates/python_basic certificate_page-0001.jpg",
       tags: ["PYTHON", "ALGORITHMS", "HACKERRANK"],
-      description:
-        "Passed the HackerRank skill certification test verifying proficiency in core Python programming, data structures, and logic implementation (Credential ID: E256963A81CC).",
+      description: lang === "id"
+        ? "Lulus tes sertifikasi keahlian HackerRank yang memverifikasi kemahiran dalam pemrograman Python inti, struktur data, dan implementasi logika (Credential ID: E256963A81CC)."
+        : "Passed the HackerRank skill certification test verifying proficiency in core Python programming, data structures, and logic implementation (Credential ID: E256963A81CC).",
     },
     {
       id: "CERT // 04",
@@ -67,8 +72,9 @@ export default function CertificationsSection() {
       date: "June 2024",
       image: "/certificates/sertifikat_course_60_1823647_040624133237_page-0001.jpg",
       tags: ["JAVA", "OOP", "DICODING"],
-      description:
-        "Certificate of Competency for Java fundamental programming, object-oriented concepts, syntax, and application structure (Credential ID: NVP7Q46YWZR0).",
+      description: lang === "id"
+        ? "Sertifikat Kompetensi untuk pemrograman dasar Java, konsep berorientasi objek, sintaksis, dan struktur aplikasi (Credential ID: NVP7Q46YWZR0)."
+        : "Certificate of Competency for Java fundamental programming, object-oriented concepts, syntax, and application structure (Credential ID: NVP7Q46YWZR0).",
     },
     {
       id: "CERT // 05",
@@ -77,8 +83,9 @@ export default function CertificationsSection() {
       date: "June 2024",
       image: "/certificates/sertifikat_course_86_1823647_050624104723_page-0001.jpg",
       tags: ["PYTHON", "FOUNDATIONS", "DICODING"],
-      description:
-        "Certificate of Competency covering basic Python programming principles, data structures, and execution control (Credential ID: 98XWL51QWZM3).",
+      description: lang === "id"
+        ? "Sertifikat Kompetensi yang mencakup prinsip dasar pemrograman Python, struktur data, dan kontrol eksekusi (Credential ID: 98XWL51QWZM3)."
+        : "Certificate of Competency covering basic Python programming principles, data structures, and execution control (Credential ID: 98XWL51QWZM3).",
     },
     {
       id: "CERT // 06",
@@ -87,8 +94,9 @@ export default function CertificationsSection() {
       date: "July 2021",
       image: "/certificates/progate-sertifikat.jpg",
       tags: ["PYTHON", "SOFTWARE DEV", "PROGATE"],
-      description:
-        "Certificate of Completion for 5 Study modules covering foundational Python programming for software development.",
+      description: lang === "id"
+        ? "Sertifikat Penyelesaian untuk 5 modul Studi yang mencakup pemrograman Python dasar untuk pengembangan perangkat lunak."
+        : "Certificate of Completion for 5 Study modules covering foundational Python programming for software development.",
     },
     {
       id: "CERT // 07",
@@ -97,8 +105,9 @@ export default function CertificationsSection() {
       date: "May 2023",
       image: "/certificates/Dicoding_gdg.jpg",
       tags: ["GDSC", "COMMUNITY", "DICODING", "LEADERSHIP"],
-      description:
-        "Certificate of Attendance for participating in the Google Developer Student Clubs (GDSC) seminar organized by GDSC IT Telkom Purwokerto and Dicoding Indonesia.",
+      description: lang === "id"
+        ? "Sertifikat Kehadiran untuk partisipasi dalam seminar Google Developer Student Clubs (GDSC) yang diselenggarakan oleh GDSC IT Telkom Purwokerto dan Dicoding Indonesia."
+        : "Certificate of Attendance for participating in the Google Developer Student Clubs (GDSC) seminar organized by GDSC IT Telkom Purwokerto and Dicoding Indonesia.",
     },
     {
       id: "CERT // 08",
@@ -107,8 +116,9 @@ export default function CertificationsSection() {
       date: "November 2024",
       image: "/certificates/ICCSET_FT_UMK_.jpg",
       tags: ["CONFERENCE", "COMPUTER SCIENCE", "AI & TECH", "UMK"],
-      description:
-        "Certificate of Participation in the International Conference on Computer Science and Engineering Technology (ICCSET 2024) themed 'Transforming Industries: The Future of Artificial Intelligence in Manufacturing' (Credential ID: 1761/ICCSET/FT/UMK/XI/2024).",
+      description: lang === "id"
+        ? "Sertifikat Partisipasi pada International Conference on Computer Science and Engineering Technology (ICCSET 2024) dengan tema 'Transforming Industries: The Future of Artificial Intelligence in Manufacturing' (Credential ID: 1761/ICCSET/FT/UMK/XI/2024)."
+        : "Certificate of Participation in the International Conference on Computer Science and Engineering Technology (ICCSET 2024) themed 'Transforming Industries: The Future of Artificial Intelligence in Manufacturing' (Credential ID: 1761/ICCSET/FT/UMK/XI/2024).",
     },
     {
       id: "CERT // 09",
@@ -117,8 +127,9 @@ export default function CertificationsSection() {
       date: "January 2026",
       image: "/certificates/Naufal Rizqi Ilham Gibran_page_techcomfest.jpg",
       tags: ["CTF", "CYBER SECURITY", "COMPETITION"],
-      description:
-        "Certificate of Participation as a Contestant in the Techcomfest Capture The Flag Competition 2026, themed 'SYNC REALITY: Shaping the Future of Digital Experience'.",
+      description: lang === "id"
+        ? "Sertifikat Partisipasi sebagai Peserta dalam Kompetisi Techcomfest Capture The Flag 2026 dengan tema 'SYNC REALITY: Shaping the Future of Digital Experience'."
+        : "Certificate of Participation as a Contestant in the Techcomfest Capture The Flag Competition 2026, themed 'SYNC REALITY: Shaping the Future of Digital Experience'.",
     },
   ];
 
@@ -129,7 +140,7 @@ export default function CertificationsSection() {
         <div className="flex items-center space-x-3 mb-8 sm:mb-12 text-xs font-mono tracking-widest text-neutral-400 dark:text-neutral-500 uppercase">
           <span>06</span>
           <span className="w-8 h-[1px] bg-neutral-300 dark:bg-neutral-800"></span>
-          <span>CERTIFICATIONS & CREDENTIALS</span>
+          <span>{lang === "id" ? "SERTIFIKASI & KREDENSIAL" : "CERTIFICATIONS & CREDENTIALS"}</span>
         </div>
       </ScrollReveal>
 
@@ -172,7 +183,7 @@ export default function CertificationsSection() {
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="text-[11px] sm:text-xs font-mono text-white bg-black/70 px-2.5 sm:px-3 py-1 sm:py-1.5 uppercase tracking-wider backdrop-blur-xs">
-                      View Certificate 🔍
+                      {lang === "id" ? "Lihat Sertifikat 🔍" : "View Certificate 🔍"}
                     </span>
                   </div>
                 </div>
@@ -184,7 +195,7 @@ export default function CertificationsSection() {
 
                 {/* Issuer */}
                 <p className="text-xs font-mono text-neutral-500 dark:text-neutral-400 mb-3 sm:mb-4 uppercase tracking-wide">
-                  ISSUER: {cert.issuer}
+                  {lang === "id" ? "PENERBIT:" : "ISSUER:"} {cert.issuer}
                 </p>
 
                 {/* Description */}
@@ -240,7 +251,7 @@ export default function CertificationsSection() {
                 {selectedCert.title}
               </h2>
               <p className="text-xs font-mono text-neutral-500 dark:text-neutral-400 mt-1 uppercase">
-                ISSUER: {selectedCert.issuer}
+                {lang === "id" ? "PENERBIT:" : "ISSUER:"} {selectedCert.issuer}
               </p>
             </div>
 

@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function SkillsSection() {
+  const { lang } = useLanguage();
+
   const skills = [
     { kanji: "蛇", name: "Python", icon: "/asset/tile-09-arrow-up-right-3.png" },
     { kanji: "型", name: "TypeScript", icon: "/asset/tile-09-arrow-up-right-3.png" },
@@ -39,7 +42,7 @@ export default function SkillsSection() {
         <div className="flex items-center space-x-3 mb-8 sm:mb-12 text-xs font-mono tracking-widest text-neutral-400 dark:text-neutral-500 uppercase">
           <span>03</span>
           <span className="w-8 h-[1px] bg-neutral-300 dark:bg-neutral-800"></span>
-          <span className="break-words">PROGRAMMING LANGUAGES, FRAMEWORKS AND DATABASE</span>
+          <span className="break-words">{lang === "id" ? "BAHASA PEMROGRAMAN, FRAMEWORK DAN DATABASE" : "PROGRAMMING LANGUAGES, FRAMEWORKS AND DATABASE"}</span>
         </div>
       </ScrollReveal>
 

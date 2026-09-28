@@ -1,32 +1,45 @@
 "use client";
 
 import ScrollReveal from "./ScrollReveal";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function LogsSection() {
+  const { lang } = useLanguage();
+
   const logs = [
     {
       quarter: "2025 // Q3",
-      title: "GEMASTIK XVIII 2025: National Finalist in Digital Forensics Division (Kemendikbudristek)",
+      title: lang === "id"
+        ? "GEMASTIK XVIII 2025: Finalis Nasional Divisi Keamanan Siber (Kemendikbudristek)"
+        : "GEMASTIK XVIII 2025: National Finalist in Digital Forensics Division (Kemendikbudristek)",
       tags: ["[MALWARE ANALYSIS]", "[MEMORY FORENSICS]", "[NETWORK FORENSICS]", "[LINUX]"],
     },
     {
       quarter: "2025 // Q4",
-      title: "BINUS National Cyber Week (NCW): In the digital forensics division, tackling memory forensics cases and malware analysis",
+      title: lang === "id"
+        ? "BINUS National Cyber Week (NCW): Di divisi forensik digital, menyelesaikan kasus forensik memori dan analisis malware"
+        : "BINUS National Cyber Week (NCW): In the digital forensics division, tackling memory forensics cases and malware analysis",
       tags: ["[CTF]", "[CRYPTO]", "[REVERSE ENG]"],
     },
     {
       quarter: "2026 // Q3",
-      title: "POLINES Techcomfest CTF Competition: Cyber Security Challenge & Network Forensics",
+      title: lang === "id"
+        ? "POLINES Techcomfest CTF Competition: Tantangan Keamanan Siber & Forensik Jaringan"
+        : "POLINES Techcomfest CTF Competition: Cyber Security Challenge & Network Forensics",
       tags: ["[CYBER SECURITY]", "[FORENSICS]", "[NETWORK]"],
     },
     {
       quarter: "2026 // Q3",
-      title: "ITS ARA CTF Competition: Cyber Security Challenge & Network Forensics",
+      title: lang === "id"
+        ? "ITS ARA CTF Competition: Tantangan Keamanan Siber & Forensik Jaringan"
+        : "ITS ARA CTF Competition: Cyber Security Challenge & Network Forensics",
       tags: ["[CYBER SECURITY]", "[FORENSICS]", "[NETWORK]"],
     },
     {
       quarter: "2026 // Q3",
-      title: "UKSW FIT Competition: Cyber Security Challenge & Network Forensics",
+      title: lang === "id"
+        ? "UKSW FIT Competition: Tantangan Keamanan Siber & Forensik Jaringan"
+        : "UKSW FIT Competition: Cyber Security Challenge & Network Forensics",
       tags: ["[CYBER SECURITY]", "[FORENSICS]", "[NETWORK]"],
     },
   ];
@@ -38,7 +51,7 @@ export default function LogsSection() {
         <div className="flex items-center space-x-3 mb-8 sm:mb-12 text-xs font-mono tracking-widest text-neutral-400 dark:text-neutral-500 uppercase">
           <span>05</span>
           <span className="w-8 h-[1px] bg-neutral-300 dark:bg-neutral-800"></span>
-          <span>CTF & INVESTIGATION LOGS</span>
+          <span>{lang === "id" ? "LOG CTF & INVESTIGASI" : "CTF & INVESTIGATION LOGS"}</span>
         </div>
       </ScrollReveal>
 

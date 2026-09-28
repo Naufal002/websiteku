@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const { lang, toggleLang } = useLanguage();
 
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -83,17 +85,17 @@ export default function Navbar() {
 
   // Maximum 3 primary menus displayed directly on the navbar
   const primaryNavItems = [
-    { label: "About", href: "#about" },
-    { label: "Works", href: "#works" },
-    { label: "Contact", href: "#contact" },
+    { label: lang === "id" ? "Tentang" : "About", href: "#about" },
+    { label: lang === "id" ? "Karya" : "Works", href: "#works" },
+    { label: lang === "id" ? "Kontak" : "Contact", href: "#contact" },
   ];
 
   // Remaining sections stored inside the three-lines hamburger menu
   const moreNavItems = [
-    { label: "Specialization", href: "#specialization", number: "02" },
-    { label: "Skills", href: "#skills", number: "03" },
-    { label: "CTF Logs", href: "#logs", number: "05" },
-    { label: "Certifications", href: "#certifications", number: "06" },
+    { label: lang === "id" ? "Spesialisasi" : "Specialization", href: "#specialization", number: "02" },
+    { label: lang === "id" ? "Keahlian" : "Skills", href: "#skills", number: "03" },
+    { label: lang === "id" ? "Log CTF" : "CTF Logs", href: "#logs", number: "05" },
+    { label: lang === "id" ? "Sertifikasi" : "Certifications", href: "#certifications", number: "06" },
   ];
 
   return (
@@ -128,8 +130,19 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Action Buttons: Three-lines Menu + Theme Toggle */}
+          {/* Action Buttons: Three-lines Menu + Theme Toggle + Lang Toggle */}
           <div className="flex items-center space-x-1 sm:space-x-2 border-l border-neutral-200 dark:border-neutral-800 pl-2 sm:pl-4">
+            {/* Language Toggle Button */}
+            <button
+              onClick={toggleLang}
+              type="button"
+              className="p-1.5 sm:p-2 rounded-full text-xs font-mono font-bold text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-200/50 dark:hover:bg-neutral-800/60 transition-all focus:outline-none cursor-pointer uppercase"
+              title={lang === "en" ? "Switch to Indonesian" : "Switch to English"}
+              aria-label="Toggle Language"
+            >
+              {lang}
+            </button>
+
             {/* Theme Toggle Button */}
             <button
               onClick={toggleDarkMode}
