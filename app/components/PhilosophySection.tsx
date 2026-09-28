@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 import { useLanguage } from "../context/LanguageContext";
 

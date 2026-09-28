@@ -18,7 +18,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const savedLang = localStorage.getItem("lang") as Language;
     if (savedLang === "en" || savedLang === "id") {
-      setLangState(savedLang);
+      // Schedule state update asynchronously to avoid synchronous cascading renders error
+      setTimeout(() => {
+        setLangState(savedLang);
+      }, 0);
     }
   }, []);
 

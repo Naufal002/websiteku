@@ -118,7 +118,7 @@ export default function Navbar() {
         {/* Navigation & Controls */}
         <div className="flex items-center space-x-2 sm:space-x-6 md:space-x-8">
           {/* Max 3 Main Nav Links */}
-          <nav className="flex items-center space-x-2.5 sm:space-x-6 md:space-x-8">
+          <nav className="hidden sm:flex items-center space-x-4 md:space-x-8">
             {primaryNavItems.map((item) => (
               <Link
                 key={item.label}
@@ -131,7 +131,7 @@ export default function Navbar() {
           </nav>
 
           {/* Action Buttons: Three-lines Menu + Theme Toggle + Lang Toggle */}
-          <div className="flex items-center space-x-1 sm:space-x-2 border-l border-neutral-200 dark:border-neutral-800 pl-2 sm:pl-4">
+          <div className="flex items-center space-x-1 sm:space-x-2 sm:border-l sm:border-neutral-200 dark:sm:border-neutral-800 sm:pl-4">
             {/* Language Toggle Button */}
             <button
               onClick={toggleLang}
