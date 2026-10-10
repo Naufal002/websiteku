@@ -34,7 +34,7 @@ export default function ArtifactsSection() {
     {
       id: "PROJECT // 04",
       tags: ["Website", "Next.js", "TypeScript", "POS System", "Supabase"],
-      title: "Kasir Pulsa",
+      title: "Kasentra",
       description: lang === "id"
         ? "Sistem kasir POS berbasis web yang disesuaikan untuk penjualan pulsa seluler dan top-up digital, terintegrasi mulus dengan pemindai barcode dan printer struk termal untuk alur kerja checkout yang cepat."
         : "A web-based POS cashier system tailored for mobile credit and digital top-up sales, seamlessly integrated with barcode scanners and thermal receipt printers for fast checkout workflows.",
