@@ -27,9 +27,28 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${plusJakarta.variable} font-sans scroll-smooth antialiased`}
+      className={`dark ${cormorant.variable} ${plusJakarta.variable} font-sans scroll-smooth antialiased`}
+      suppressHydrationWarning
     >
-      <body className="bg-[#FAFAFA] text-[#1C1C1E] min-h-screen selection:bg-neutral-200">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('theme');
+                  if (saved === 'light') {
+                    document.documentElement.classList.remove('dark');
+                  } else {
+                    document.documentElement.classList.add('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="bg-[#FAFAFA] dark:bg-[#0F0F10] text-[#1C1C1E] dark:text-[#F4F4F5] min-h-screen selection:bg-neutral-200 dark:selection:bg-neutral-800">
         <LanguageProvider>
           {children}
         </LanguageProvider>

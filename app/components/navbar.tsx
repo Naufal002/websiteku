@@ -7,7 +7,7 @@ import { useLanguage } from "../context/LanguageContext";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const { lang, toggleLang } = useLanguage();
 
   const menuRef = useRef<HTMLDivElement>(null);
@@ -16,8 +16,8 @@ export default function Navbar() {
   useEffect(() => {
     // Synchronize DOM theme on mount without triggering ESLint set-state-in-effect error
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark);
+    // Default to dark mode unless explicitly saved as 'light'
+    const shouldBeDark = savedTheme === "light" ? false : true;
 
     if (shouldBeDark) {
       document.documentElement.classList.add("dark");

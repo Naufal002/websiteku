@@ -11,7 +11,7 @@ import FooterSection from "./components/FooterSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA] text-[#1C1C1E] selection:bg-neutral-200 w-full overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#0F0F10] text-[#1C1C1E] dark:text-[#F4F4F5] selection:bg-neutral-200 dark:selection:bg-neutral-800 w-full overflow-x-hidden">
       <Navbar />
       <main className="max-w-full overflow-hidden">
         <HeroSection />
